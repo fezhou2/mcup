@@ -1,5 +1,5 @@
-from mcp.server.fastmcp import Context, FastMCP
-from mcp.server.session import ServerSession
+from mcup.server.fastmcp import Context, FastMCP
+from mcup.server.session import ServerSession
 
 mcp = FastMCP(name="Notifications Example")
 

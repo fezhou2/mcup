@@ -4,9 +4,9 @@ from unittest.mock import patch
 import anyio
 import pytest
 
-from mcp.shared.message import SessionMessage
-from mcp.shared.session import BaseSession, RequestId, SendResultT
-from mcp.types import ClientNotification, ClientRequest, ClientResult, EmptyResult, ErrorData, PingRequest
+from mcup.shared.message import SessionMessage
+from mcup.shared.session import BaseSession, RequestId, SendResultT
+from mcup.types import ClientNotification, ClientRequest, ClientResult, EmptyResult, ErrorData, PingRequest
 
 
 @pytest.mark.anyio

@@ -1,5 +1,5 @@
-from mcp.server.fastmcp import FastMCP
-from mcp.server.fastmcp.prompts import base
+from mcup.server.fastmcp import FastMCP
+from mcup.server.fastmcp.prompts import base
 
 mcp = FastMCP(name="Prompt Example")
 

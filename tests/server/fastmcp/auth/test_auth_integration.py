@@ -15,7 +15,7 @@ import pytest
 from pydantic import AnyHttpUrl
 from starlette.applications import Starlette
 
-from mcp.server.auth.provider import (
+from mcup.server.auth.provider import (
     AccessToken,
     AuthorizationCode,
     AuthorizationParams,
@@ -23,8 +23,8 @@ from mcp.server.auth.provider import (
     RefreshToken,
     construct_redirect_uri,
 )
-from mcp.server.auth.routes import ClientRegistrationOptions, RevocationOptions, create_auth_routes
-from mcp.shared.auth import OAuthClientInformationFull, OAuthToken
+from mcup.server.auth.routes import ClientRegistrationOptions, RevocationOptions, create_auth_routes
+from mcup.shared.auth import OAuthClientInformationFull, OAuthToken
 
 
 # Mock OAuth provider for testing

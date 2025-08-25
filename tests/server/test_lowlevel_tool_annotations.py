@@ -3,14 +3,14 @@
 import anyio
 import pytest
 
-from mcp.client.session import ClientSession
-from mcp.server import Server
-from mcp.server.lowlevel import NotificationOptions
-from mcp.server.models import InitializationOptions
-from mcp.server.session import ServerSession
-from mcp.shared.message import SessionMessage
-from mcp.shared.session import RequestResponder
-from mcp.types import ClientResult, ServerNotification, ServerRequest, Tool, ToolAnnotations
+from mcup.client.session import ClientSession
+from mcup.server import Server
+from mcup.server.lowlevel import NotificationOptions
+from mcup.server.models import InitializationOptions
+from mcup.server.session import ServerSession
+from mcup.shared.message import SessionMessage
+from mcup.shared.session import RequestResponder
+from mcup.types import ClientResult, ServerNotification, ServerRequest, Tool, ToolAnnotations
 
 
 @pytest.mark.anyio

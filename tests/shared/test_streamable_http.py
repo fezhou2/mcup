@@ -21,11 +21,11 @@ from starlette.applications import Starlette
 from starlette.requests import Request
 from starlette.routing import Mount
 
-import mcp.types as types
-from mcp.client.session import ClientSession
-from mcp.client.streamable_http import streamablehttp_client
-from mcp.server import Server
-from mcp.server.streamable_http import (
+import mcup.types as types
+from mcup.client.session import ClientSession
+from mcup.client.streamable_http import streamablehttp_client
+from mcup.server import Server
+from mcup.server.streamable_http import (
     MCP_PROTOCOL_VERSION_HEADER,
     MCP_SESSION_ID_HEADER,
     SESSION_ID_PATTERN,
@@ -36,13 +36,13 @@ from mcp.server.streamable_http import (
     StreamableHTTPServerTransport,
     StreamId,
 )
-from mcp.server.streamable_http_manager import StreamableHTTPSessionManager
-from mcp.server.transport_security import TransportSecuritySettings
-from mcp.shared.context import RequestContext
-from mcp.shared.exceptions import McpError
-from mcp.shared.message import ClientMessageMetadata
-from mcp.shared.session import RequestResponder
-from mcp.types import InitializeResult, TextContent, TextResourceContents, Tool
+from mcup.server.streamable_http_manager import StreamableHTTPSessionManager
+from mcup.server.transport_security import TransportSecuritySettings
+from mcup.shared.context import RequestContext
+from mcup.shared.exceptions import McpError
+from mcup.shared.message import ClientMessageMetadata
+from mcup.shared.session import RequestResponder
+from mcup.types import InitializeResult, TextContent, TextResourceContents, Tool
 
 # Test constants
 SERVER_NAME = "test_streamable_http_server"
@@ -941,8 +941,8 @@ async def test_streamablehttp_client_json_response(json_response_server: None, j
 @pytest.mark.anyio
 async def test_streamablehttp_client_get_stream(basic_server: None, basic_server_url: str):
     """Test GET stream functionality for server-initiated messages."""
-    import mcp.types as types
-    from mcp.shared.session import RequestResponder
+    import mcup.types as types
+    from mcup.shared.session import RequestResponder
 
     notifications_received: list[types.ServerNotification] = []
 

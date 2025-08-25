@@ -10,8 +10,8 @@ import sys
 import pytest
 from pytest_examples import CodeExample, EvalExample, find_examples
 
-from mcp.shared.memory import create_connected_server_and_client_session as client_session
-from mcp.types import TextContent, TextResourceContents
+from mcup.shared.memory import create_connected_server_and_client_session as client_session
+from mcup.types import TextContent, TextResourceContents
 
 
 @pytest.mark.anyio

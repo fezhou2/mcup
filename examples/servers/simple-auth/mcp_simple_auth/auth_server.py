@@ -22,8 +22,8 @@ from starlette.responses import JSONResponse, Response
 from starlette.routing import Route
 from uvicorn import Config, Server
 
-from mcp.server.auth.routes import cors_middleware, create_auth_routes
-from mcp.server.auth.settings import AuthSettings, ClientRegistrationOptions
+from mcup.server.auth.routes import cors_middleware, create_auth_routes
+from mcup.server.auth.settings import AuthSettings, ClientRegistrationOptions
 
 from .simple_auth_provider import SimpleAuthSettings, SimpleOAuthProvider
 

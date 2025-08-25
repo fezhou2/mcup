@@ -16,8 +16,8 @@ import click
 from pydantic import AnyHttpUrl
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
-from mcp.server.auth.settings import AuthSettings
-from mcp.server.fastmcp.server import FastMCP
+from mcup.server.auth.settings import AuthSettings
+from mcup.server.fastmcp.server import FastMCP
 
 from .token_verifier import IntrospectionTokenVerifier
 

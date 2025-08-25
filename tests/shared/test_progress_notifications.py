@@ -3,15 +3,15 @@ from typing import Any, cast
 import anyio
 import pytest
 
-import mcp.types as types
-from mcp.client.session import ClientSession
-from mcp.server import Server
-from mcp.server.lowlevel import NotificationOptions
-from mcp.server.models import InitializationOptions
-from mcp.server.session import ServerSession
-from mcp.shared.context import RequestContext
-from mcp.shared.progress import progress
-from mcp.shared.session import BaseSession, RequestResponder, SessionMessage
+import mcup.types as types
+from mcup.client.session import ClientSession
+from mcup.server import Server
+from mcup.server.lowlevel import NotificationOptions
+from mcup.server.models import InitializationOptions
+from mcup.server.session import ServerSession
+from mcup.shared.context import RequestContext
+from mcup.shared.progress import progress
+from mcup.shared.session import BaseSession, RequestResponder, SessionMessage
 
 
 @pytest.mark.anyio

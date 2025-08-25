@@ -8,11 +8,11 @@ import time
 import anyio
 import pytest
 
-from mcp.client.session import ClientSession
-from mcp.client.stdio import StdioServerParameters, _create_platform_compatible_process, stdio_client
-from mcp.shared.exceptions import McpError
-from mcp.shared.message import SessionMessage
-from mcp.types import CONNECTION_CLOSED, JSONRPCMessage, JSONRPCRequest, JSONRPCResponse
+from mcup.client.session import ClientSession
+from mcup.client.stdio import StdioServerParameters, _create_platform_compatible_process, stdio_client
+from mcup.shared.exceptions import McpError
+from mcup.shared.message import SessionMessage
+from mcup.types import CONNECTION_CLOSED, JSONRPCMessage, JSONRPCRequest, JSONRPCResponse
 
 from ..shared.test_win32_utils import escape_path_for_python
 
@@ -316,7 +316,7 @@ class TestChildProcessCleanup:
 
             # Terminate using our function
             print("Terminating process and children...")
-            from mcp.client.stdio import _terminate_process_tree
+            from mcup.client.stdio import _terminate_process_tree
 
             await _terminate_process_tree(proc)
 
@@ -417,7 +417,7 @@ class TestChildProcessCleanup:
                     assert new_size > initial_size, f"{name} process should be writing"
 
             # Terminate the whole tree
-            from mcp.client.stdio import _terminate_process_tree
+            from mcup.client.stdio import _terminate_process_tree
 
             await _terminate_process_tree(proc)
 
@@ -498,7 +498,7 @@ class TestChildProcessCleanup:
                 assert size2 > size1, "Child should be writing"
 
             # Terminate - this will kill the process group even if parent exits first
-            from mcp.client.stdio import _terminate_process_tree
+            from mcup.client.stdio import _terminate_process_tree
 
             await _terminate_process_tree(proc)
 

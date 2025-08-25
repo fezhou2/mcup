@@ -3,7 +3,7 @@ Run from the repository root:
     uv run examples/snippets/servers/streamable_config.py
 """
 
-from mcp.server.fastmcp import FastMCP
+from mcup.server.fastmcp import FastMCP
 
 # Stateful server (maintains session state)
 mcp = FastMCP("StatefulServer")

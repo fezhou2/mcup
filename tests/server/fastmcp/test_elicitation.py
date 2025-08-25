@@ -7,12 +7,12 @@ from typing import Any
 import pytest
 from pydantic import BaseModel, Field
 
-from mcp.client.session import ClientSession, ElicitationFnT
-from mcp.server.fastmcp import Context, FastMCP
-from mcp.server.session import ServerSession
-from mcp.shared.context import RequestContext
-from mcp.shared.memory import create_connected_server_and_client_session
-from mcp.types import ElicitRequestParams, ElicitResult, TextContent
+from mcup.client.session import ClientSession, ElicitationFnT
+from mcup.server.fastmcp import Context, FastMCP
+from mcup.server.session import ServerSession
+from mcup.shared.context import RequestContext
+from mcup.shared.memory import create_connected_server_and_client_session
+from mcup.types import ElicitRequestParams, ElicitResult, TextContent
 
 
 # Shared schema for basic tests

@@ -3,9 +3,9 @@ import io
 import anyio
 import pytest
 
-from mcp.server.stdio import stdio_server
-from mcp.shared.message import SessionMessage
-from mcp.types import JSONRPCMessage, JSONRPCRequest, JSONRPCResponse
+from mcup.server.stdio import stdio_server
+from mcup.shared.message import SessionMessage
+from mcup.types import JSONRPCMessage, JSONRPCRequest, JSONRPCResponse
 
 
 @pytest.mark.anyio

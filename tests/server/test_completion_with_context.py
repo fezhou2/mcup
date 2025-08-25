@@ -6,9 +6,9 @@ from typing import Any
 
 import pytest
 
-from mcp.server.lowlevel import Server
-from mcp.shared.memory import create_connected_server_and_client_session
-from mcp.types import (
+from mcup.server.lowlevel import Server
+from mcup.shared.memory import create_connected_server_and_client_session
+from mcup.types import (
     Completion,
     CompletionArgument,
     CompletionContext,

@@ -12,7 +12,7 @@ import pytest
 from dirty_equals import IsPartialDict
 from pydantic import BaseModel, Field
 
-from mcp.server.fastmcp.utilities.func_metadata import func_metadata
+from mcup.server.fastmcp.utilities.func_metadata import func_metadata
 
 
 class SomeInputModelA(BaseModel):
@@ -557,7 +557,7 @@ async def test_str_annotation_runtime_validation():
 
 def test_structured_output_requires_return_annotation():
     """Test that structured_output=True requires a return annotation"""
-    from mcp.server.fastmcp.exceptions import InvalidSignature
+    from mcup.server.fastmcp.exceptions import InvalidSignature
 
     def func_no_annotation():
         return "hello"
@@ -899,7 +899,7 @@ def test_structured_output_unserializable_type_error():
     """Test error when structured_output=True is used with unserializable types"""
     from typing import NamedTuple
 
-    from mcp.server.fastmcp.exceptions import InvalidSignature
+    from mcup.server.fastmcp.exceptions import InvalidSignature
 
     # Test with a class that has non-serializable default values
     class ConfigWithCallable:

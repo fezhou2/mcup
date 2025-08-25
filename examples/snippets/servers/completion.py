@@ -1,5 +1,5 @@
-from mcp.server.fastmcp import FastMCP
-from mcp.types import (
+from mcup.server.fastmcp import FastMCP
+from mcup.types import (
     Completion,
     CompletionArgument,
     CompletionContext,

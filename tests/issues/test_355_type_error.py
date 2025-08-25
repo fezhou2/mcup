@@ -2,8 +2,8 @@ from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
 from dataclasses import dataclass
 
-from mcp.server.fastmcp import Context, FastMCP
-from mcp.server.session import ServerSession
+from mcup.server.fastmcp import Context, FastMCP
+from mcup.server.session import ServerSession
 
 
 class Database:  # Replace with your actual DB type

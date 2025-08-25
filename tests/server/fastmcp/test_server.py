@@ -7,16 +7,16 @@ import pytest
 from pydantic import AnyUrl, BaseModel
 from starlette.routing import Mount, Route
 
-from mcp.server.fastmcp import Context, FastMCP
-from mcp.server.fastmcp.prompts.base import Message, UserMessage
-from mcp.server.fastmcp.resources import FileResource, FunctionResource
-from mcp.server.fastmcp.utilities.types import Audio, Image
-from mcp.server.session import ServerSession
-from mcp.shared.exceptions import McpError
-from mcp.shared.memory import (
+from mcup.server.fastmcp import Context, FastMCP
+from mcup.server.fastmcp.prompts.base import Message, UserMessage
+from mcup.server.fastmcp.resources import FileResource, FunctionResource
+from mcup.server.fastmcp.utilities.types import Audio, Image
+from mcup.server.session import ServerSession
+from mcup.shared.exceptions import McpError
+from mcup.shared.memory import (
     create_connected_server_and_client_session as client_session,
 )
-from mcp.types import (
+from mcup.types import (
     AudioContent,
     BlobResourceContents,
     ContentBlock,
@@ -27,7 +27,7 @@ from mcp.types import (
 )
 
 if TYPE_CHECKING:
-    from mcp.server.fastmcp import Context
+    from mcup.server.fastmcp import Context
 
 
 class TestServer:

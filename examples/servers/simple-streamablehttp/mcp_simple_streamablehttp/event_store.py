@@ -10,8 +10,8 @@ from collections import deque
 from dataclasses import dataclass
 from uuid import uuid4
 
-from mcp.server.streamable_http import EventCallback, EventId, EventMessage, EventStore, StreamId
-from mcp.types import JSONRPCMessage
+from mcup.server.streamable_http import EventCallback, EventId, EventMessage, EventStore, StreamId
+from mcup.types import JSONRPCMessage
 
 logger = logging.getLogger(__name__)
 

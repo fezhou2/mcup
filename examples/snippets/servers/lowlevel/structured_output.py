@@ -6,10 +6,10 @@ Run from the repository root:
 import asyncio
 from typing import Any
 
-import mcp.server.stdio
-import mcp.types as types
-from mcp.server.lowlevel import NotificationOptions, Server
-from mcp.server.models import InitializationOptions
+import mcup.server.stdio
+import mcup.types as types
+from mcup.server.lowlevel import NotificationOptions, Server
+from mcup.server.models import InitializationOptions
 
 server = Server("example-server")
 
@@ -64,7 +64,7 @@ async def call_tool(name: str, arguments: dict[str, Any]) -> dict[str, Any]:
 
 async def run():
     """Run the structured output server."""
-    async with mcp.server.stdio.stdio_server() as (read_stream, write_stream):
+    async with mcup.server.stdio.stdio_server() as (read_stream, write_stream):
         await server.run(
             read_stream,
             write_stream,

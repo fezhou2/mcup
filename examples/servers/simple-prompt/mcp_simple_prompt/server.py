@@ -1,7 +1,7 @@
 import anyio
 import click
-import mcp.types as types
-from mcp.server.lowlevel import Server
+import mcup.types as types
+from mcup.server.lowlevel import Server
 from starlette.requests import Request
 
 
@@ -77,7 +77,7 @@ def main(port: int, transport: str) -> int:
         )
 
     if transport == "sse":
-        from mcp.server.sse import SseServerTransport
+        from mcup.server.sse import SseServerTransport
         from starlette.applications import Starlette
         from starlette.responses import Response
         from starlette.routing import Mount, Route
@@ -101,7 +101,7 @@ def main(port: int, transport: str) -> int:
 
         uvicorn.run(starlette_app, host="127.0.0.1", port=port)
     else:
-        from mcp.server.stdio import stdio_server
+        from mcup.server.stdio import stdio_server
 
         async def arun():
             async with stdio_server() as streams:

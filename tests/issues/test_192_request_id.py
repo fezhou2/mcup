@@ -1,10 +1,10 @@
 import anyio
 import pytest
 
-from mcp.server.lowlevel import NotificationOptions, Server
-from mcp.server.models import InitializationOptions
-from mcp.shared.message import SessionMessage
-from mcp.types import (
+from mcup.server.lowlevel import NotificationOptions, Server
+from mcup.server.models import InitializationOptions
+from mcup.shared.message import SessionMessage
+from mcup.types import (
     LATEST_PROTOCOL_VERSION,
     ClientCapabilities,
     Implementation,

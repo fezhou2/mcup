@@ -3,8 +3,8 @@ from typing import Any
 import pytest
 from pydantic import FileUrl
 
-from mcp.server.fastmcp.prompts.base import AssistantMessage, Message, Prompt, TextContent, UserMessage
-from mcp.types import EmbeddedResource, TextResourceContents
+from mcup.server.fastmcp.prompts.base import AssistantMessage, Message, Prompt, TextContent, UserMessage
+from mcup.types import EmbeddedResource, TextResourceContents
 
 
 class TestRenderPrompt:

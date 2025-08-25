@@ -2,7 +2,7 @@
 
 from PIL import Image as PILImage
 
-from mcp.server.fastmcp import FastMCP, Image
+from mcup.server.fastmcp import FastMCP, Image
 
 mcp = FastMCP("Image Example")
 

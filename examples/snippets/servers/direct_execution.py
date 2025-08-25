@@ -7,7 +7,7 @@ cd to the `examples/snippets` directory and run:
     python servers/direct_execution.py
 """
 
-from mcp.server.fastmcp import FastMCP
+from mcup.server.fastmcp import FastMCP
 
 mcp = FastMCP("My App")
 

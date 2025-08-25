@@ -10,8 +10,8 @@ import pytest
 from inline_snapshot import Is, snapshot
 from pydantic import AnyHttpUrl, AnyUrl
 
-from mcp.client.auth import OAuthClientProvider, PKCEParameters
-from mcp.shared.auth import OAuthClientInformationFull, OAuthClientMetadata, OAuthToken, ProtectedResourceMetadata
+from mcup.client.auth import OAuthClientProvider, PKCEParameters
+from mcup.shared.auth import OAuthClientInformationFull, OAuthClientMetadata, OAuthToken, ProtectedResourceMetadata
 
 
 class MockTokenStorage:
@@ -814,8 +814,8 @@ def test_build_metadata(
     registration_endpoint: str,
     revocation_endpoint: str,
 ):
-    from mcp.server.auth.routes import build_metadata
-    from mcp.server.auth.settings import ClientRegistrationOptions, RevocationOptions
+    from mcup.server.auth.routes import build_metadata
+    from mcup.server.auth.settings import ClientRegistrationOptions, RevocationOptions
 
     metadata = build_metadata(
         issuer_url=AnyHttpUrl(issuer_url),

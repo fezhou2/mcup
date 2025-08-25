@@ -5,7 +5,7 @@ from typing import Any
 
 import pytest
 
-from mcp.cli.cli import _build_uv_command, _get_npx_command, _parse_file_path  # type: ignore[reportPrivateUsage]
+from mcup.cli.cli import _build_uv_command, _get_npx_command, _parse_file_path  # type: ignore[reportPrivateUsage]
 
 
 @pytest.mark.parametrize(

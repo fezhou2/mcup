@@ -5,8 +5,8 @@ Run from the repository root:
 
 import asyncio
 
-from mcp import ClientSession
-from mcp.client.streamable_http import streamablehttp_client
+from mcup import ClientSession
+from mcup.client.streamable_http import streamablehttp_client
 
 
 async def main():

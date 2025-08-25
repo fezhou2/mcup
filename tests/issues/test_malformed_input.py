@@ -6,10 +6,10 @@ from typing import Any
 import anyio
 import pytest
 
-from mcp.server.models import InitializationOptions
-from mcp.server.session import ServerSession
-from mcp.shared.message import SessionMessage
-from mcp.types import (
+from mcup.server.models import InitializationOptions
+from mcup.server.session import ServerSession
+from mcup.shared.message import SessionMessage
+from mcup.types import (
     INVALID_PARAMS,
     JSONRPCError,
     JSONRPCMessage,

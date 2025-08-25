@@ -5,9 +5,9 @@ from typing import Any
 
 import anyio
 import click
-import mcp.types as types
-from mcp.server.lowlevel import Server
-from mcp.server.streamable_http_manager import StreamableHTTPSessionManager
+import mcup.types as types
+from mcup.server.lowlevel import Server
+from mcup.server.streamable_http_manager import StreamableHTTPSessionManager
 from starlette.applications import Starlette
 from starlette.middleware.cors import CORSMiddleware
 from starlette.routing import Mount

@@ -17,8 +17,8 @@ from typing import TYPE_CHECKING
 import anyio
 import pytest
 
-from mcp import ClientSession, StdioServerParameters
-from mcp.client.stdio import _create_platform_compatible_process, stdio_client
+from mcup import ClientSession, StdioServerParameters
+from mcup.client.stdio import _create_platform_compatible_process, stdio_client
 
 # TODO(Marcelo): This doesn't seem to be the right path. We should fix this.
 if TYPE_CHECKING:

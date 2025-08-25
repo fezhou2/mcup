@@ -5,11 +5,11 @@ from typing import Any
 import anyio
 import pytest
 
-import mcp.types as types
-from mcp.server.lowlevel.server import Server
-from mcp.shared.exceptions import McpError
-from mcp.shared.memory import create_connected_server_and_client_session
-from mcp.types import (
+import mcup.types as types
+from mcup.server.lowlevel.server import Server
+from mcup.shared.exceptions import McpError
+from mcup.shared.memory import create_connected_server_and_client_session
+from mcup.types import (
     CallToolRequest,
     CallToolRequestParams,
     CallToolResult,

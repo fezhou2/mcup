@@ -4,7 +4,7 @@ from tempfile import NamedTemporaryFile
 import pytest
 from pydantic import AnyUrl, FileUrl
 
-from mcp.server.fastmcp.resources import FileResource, FunctionResource, ResourceManager, ResourceTemplate
+from mcup.server.fastmcp.resources import FileResource, FunctionResource, ResourceManager, ResourceTemplate
 
 
 @pytest.fixture

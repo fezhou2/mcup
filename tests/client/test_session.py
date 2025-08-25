@@ -3,13 +3,13 @@ from typing import Any
 import anyio
 import pytest
 
-import mcp.types as types
-from mcp.client.session import DEFAULT_CLIENT_INFO, ClientSession
-from mcp.shared.context import RequestContext
-from mcp.shared.message import SessionMessage
-from mcp.shared.session import RequestResponder
-from mcp.shared.version import SUPPORTED_PROTOCOL_VERSIONS
-from mcp.types import (
+import mcup.types as types
+from mcup.client.session import DEFAULT_CLIENT_INFO, ClientSession
+from mcup.shared.context import RequestContext
+from mcup.shared.message import SessionMessage
+from mcup.shared.session import RequestResponder
+from mcup.shared.version import SUPPORTED_PROTOCOL_VERSIONS
+from mcup.types import (
     LATEST_PROTOCOL_VERSION,
     ClientNotification,
     ClientRequest,

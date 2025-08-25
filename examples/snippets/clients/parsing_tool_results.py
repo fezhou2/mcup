@@ -2,8 +2,8 @@
 
 import asyncio
 
-from mcp import ClientSession, StdioServerParameters, types
-from mcp.client.stdio import stdio_client
+from mcup import ClientSession, StdioServerParameters, types
+from mcup.client.stdio import stdio_client
 
 
 async def parse_tool_results():

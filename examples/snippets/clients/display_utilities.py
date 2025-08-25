@@ -6,9 +6,9 @@ cd to the `examples/snippets` directory and run:
 import asyncio
 import os
 
-from mcp import ClientSession, StdioServerParameters
-from mcp.client.stdio import stdio_client
-from mcp.shared.metadata_utils import get_display_name
+from mcup import ClientSession, StdioServerParameters
+from mcup.client.stdio import stdio_client
+from mcup.shared.metadata_utils import get_display_name
 
 # Create server parameters for stdio connection
 server_params = StdioServerParameters(

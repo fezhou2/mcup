@@ -3,8 +3,8 @@
 import logging
 from typing import Any
 
-from mcp.server.auth.provider import AccessToken, TokenVerifier
-from mcp.shared.auth_utils import check_resource_allowed, resource_url_from_server_url
+from mcup.server.auth.provider import AccessToken, TokenVerifier
+from mcup.shared.auth_utils import check_resource_allowed, resource_url_from_server_url
 
 logger = logging.getLogger(__name__)
 

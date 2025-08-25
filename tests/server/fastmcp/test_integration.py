@@ -33,13 +33,13 @@ from examples.snippets.servers import (
     structured_output,
     tool_progress,
 )
-from mcp.client.session import ClientSession
-from mcp.client.sse import sse_client
-from mcp.client.streamable_http import GetSessionIdCallback, streamablehttp_client
-from mcp.shared.context import RequestContext
-from mcp.shared.message import SessionMessage
-from mcp.shared.session import RequestResponder
-from mcp.types import (
+from mcup.client.session import ClientSession
+from mcup.client.sse import sse_client
+from mcup.client.streamable_http import GetSessionIdCallback, streamablehttp_client
+from mcup.shared.context import RequestContext
+from mcup.shared.message import SessionMessage
+from mcup.shared.session import RequestResponder
+from mcup.types import (
     ClientResult,
     CreateMessageRequestParams,
     CreateMessageResult,
@@ -594,7 +594,7 @@ async def test_completion(server_transport: str, server_url: str) -> None:
             assert result.capabilities.prompts is not None
 
             # Test resource completion
-            from mcp.types import ResourceTemplateReference
+            from mcup.types import ResourceTemplateReference
 
             completion_result = await session.complete(
                 ref=ResourceTemplateReference(type="ref/resource", uri="github://repos/{owner}/{repo}"),
@@ -611,7 +611,7 @@ async def test_completion(server_transport: str, server_url: str) -> None:
             assert "specification" in completion_result.completion.values
 
             # Test prompt completion
-            from mcp.types import PromptReference
+            from mcup.types import PromptReference
 
             completion_result = await session.complete(
                 ref=PromptReference(type="ref/prompt", name="review_code"),

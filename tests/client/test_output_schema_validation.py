@@ -5,11 +5,11 @@ from unittest.mock import patch
 
 import pytest
 
-from mcp.server.lowlevel import Server
-from mcp.shared.memory import (
+from mcup.server.lowlevel import Server
+from mcup.shared.memory import (
     create_connected_server_and_client_session as client_session,
 )
-from mcp.types import Tool
+from mcup.types import Tool
 
 
 @contextmanager

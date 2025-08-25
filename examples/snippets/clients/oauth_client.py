@@ -12,10 +12,10 @@ from urllib.parse import parse_qs, urlparse
 
 from pydantic import AnyUrl
 
-from mcp import ClientSession
-from mcp.client.auth import OAuthClientProvider, TokenStorage
-from mcp.client.streamable_http import streamablehttp_client
-from mcp.shared.auth import OAuthClientInformationFull, OAuthClientMetadata, OAuthToken
+from mcup import ClientSession
+from mcup.client.auth import OAuthClientProvider, TokenStorage
+from mcup.client.streamable_http import streamablehttp_client
+from mcup.shared.auth import OAuthClientInformationFull, OAuthClientMetadata, OAuthToken
 
 
 class InMemoryTokenStorage(TokenStorage):

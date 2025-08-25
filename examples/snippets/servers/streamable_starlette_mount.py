@@ -8,7 +8,7 @@ import contextlib
 from starlette.applications import Starlette
 from starlette.routing import Mount
 
-from mcp.server.fastmcp import FastMCP
+from mcup.server.fastmcp import FastMCP
 
 # Create the Echo server
 echo_mcp = FastMCP(name="EchoServer", stateless_http=True)

@@ -8,12 +8,12 @@ import anyio
 import pytest
 from pydantic import TypeAdapter
 
-from mcp.server.fastmcp import Context, FastMCP
-from mcp.server.lowlevel.server import NotificationOptions, Server
-from mcp.server.models import InitializationOptions
-from mcp.server.session import ServerSession
-from mcp.shared.message import SessionMessage
-from mcp.types import (
+from mcup.server.fastmcp import Context, FastMCP
+from mcup.server.lowlevel.server import NotificationOptions, Server
+from mcup.server.models import InitializationOptions
+from mcup.server.session import ServerSession
+from mcup.shared.message import SessionMessage
+from mcup.types import (
     ClientCapabilities,
     Implementation,
     InitializeRequestParams,

@@ -1,11 +1,11 @@
 import pytest
 from pydantic import AnyUrl
 
-from mcp.server.fastmcp import FastMCP
-from mcp.shared.memory import (
+from mcup.server.fastmcp import FastMCP
+from mcup.shared.memory import (
     create_connected_server_and_client_session as client_session,
 )
-from mcp.types import (
+from mcup.types import (
     ListResourceTemplatesResult,
     TextResourceContents,
 )

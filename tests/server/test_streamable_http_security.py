@@ -14,10 +14,10 @@ from starlette.applications import Starlette
 from starlette.routing import Mount
 from starlette.types import Receive, Scope, Send
 
-from mcp.server import Server
-from mcp.server.streamable_http_manager import StreamableHTTPSessionManager
-from mcp.server.transport_security import TransportSecuritySettings
-from mcp.types import Tool
+from mcup.server import Server
+from mcup.server.streamable_http_manager import StreamableHTTPSessionManager
+from mcup.server.transport_security import TransportSecuritySettings
+from mcup.types import Tool
 
 logger = logging.getLogger(__name__)
 SERVER_NAME = "test_streamable_http_security_server"

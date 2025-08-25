@@ -12,8 +12,8 @@ from httpx import ASGITransport
 from pydantic import AnyHttpUrl
 from starlette.applications import Starlette
 
-from mcp.server.auth.provider import AuthorizeError, RegistrationError, TokenError
-from mcp.server.auth.routes import create_auth_routes
+from mcup.server.auth.provider import AuthorizeError, RegistrationError, TokenError
+from mcup.server.auth.routes import create_auth_routes
 
 # TODO(Marcelo): This TYPE_CHECKING shouldn't be here, but pytest doesn't seem to get the module correctly.
 if TYPE_CHECKING:
@@ -30,7 +30,7 @@ def oauth_provider():
 
 @pytest.fixture
 def app(oauth_provider: MockOAuthProvider):
-    from mcp.server.auth.settings import ClientRegistrationOptions, RevocationOptions
+    from mcup.server.auth.settings import ClientRegistrationOptions, RevocationOptions
 
     # Enable client registration
     client_registration_options = ClientRegistrationOptions(enabled=True)

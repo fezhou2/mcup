@@ -2,7 +2,7 @@
 Tests for mcp.server.auth.provider module.
 """
 
-from mcp.server.auth.provider import construct_redirect_uri
+from mcup.server.auth.provider import construct_redirect_uri
 
 
 class TestConstructRedirectUri:

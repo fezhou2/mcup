@@ -19,8 +19,8 @@ from starlette.exceptions import HTTPException
 from starlette.requests import Request
 from starlette.responses import Response
 
-from mcp.server.auth.settings import AuthSettings, ClientRegistrationOptions
-from mcp.server.fastmcp.server import FastMCP
+from mcup.server.auth.settings import AuthSettings, ClientRegistrationOptions
+from mcup.server.fastmcp.server import FastMCP
 
 from .simple_auth_provider import SimpleAuthSettings, SimpleOAuthProvider
 

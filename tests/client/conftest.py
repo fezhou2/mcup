@@ -6,9 +6,9 @@ from unittest.mock import patch
 import pytest
 from anyio.streams.memory import MemoryObjectSendStream
 
-import mcp.shared.memory
-from mcp.shared.message import SessionMessage
-from mcp.types import JSONRPCNotification, JSONRPCRequest
+import mcup.shared.memory
+from mcup.shared.message import SessionMessage
+from mcup.types import JSONRPCNotification, JSONRPCRequest
 
 
 class SpyMemoryObjectSendStream:
@@ -105,7 +105,7 @@ def stream_spy() -> Generator[Callable[[], StreamSpyCollection], None, None]:
         server_spy = s_spy
 
     # Create patched version of stream creation
-    original_create_streams = mcp.shared.memory.create_client_server_memory_streams
+    original_create_streams = mcup.shared.memory.create_client_server_memory_streams
 
     @asynccontextmanager
     async def patched_create_streams():

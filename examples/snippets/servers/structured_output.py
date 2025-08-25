@@ -4,7 +4,7 @@ from typing import TypedDict
 
 from pydantic import BaseModel, Field
 
-from mcp.server.fastmcp import FastMCP
+from mcup.server.fastmcp import FastMCP
 
 mcp = FastMCP("Structured Output Example")
 

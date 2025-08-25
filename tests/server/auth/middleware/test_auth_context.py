@@ -7,13 +7,13 @@ import time
 import pytest
 from starlette.types import Message, Receive, Scope, Send
 
-from mcp.server.auth.middleware.auth_context import (
+from mcup.server.auth.middleware.auth_context import (
     AuthContextMiddleware,
     auth_context_var,
     get_access_token,
 )
-from mcp.server.auth.middleware.bearer_auth import AuthenticatedUser
-from mcp.server.auth.provider import AccessToken
+from mcup.server.auth.middleware.bearer_auth import AuthenticatedUser
+from mcup.server.auth.provider import AccessToken
 
 
 class MockApp:

@@ -13,10 +13,10 @@ from starlette.requests import Request
 from starlette.responses import Response
 from starlette.routing import Mount, Route
 
-from mcp.server import Server
-from mcp.server.sse import SseServerTransport
-from mcp.server.transport_security import TransportSecuritySettings
-from mcp.types import Tool
+from mcup.server import Server
+from mcup.server.sse import SseServerTransport
+from mcup.server.transport_security import TransportSecuritySettings
+from mcup.types import Tool
 
 logger = logging.getLogger(__name__)
 SERVER_NAME = "test_sse_security_server"

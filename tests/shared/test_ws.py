@@ -12,12 +12,12 @@ from starlette.applications import Starlette
 from starlette.routing import WebSocketRoute
 from starlette.websockets import WebSocket
 
-from mcp.client.session import ClientSession
-from mcp.client.websocket import websocket_client
-from mcp.server import Server
-from mcp.server.websocket import websocket_server
-from mcp.shared.exceptions import McpError
-from mcp.types import (
+from mcup.client.session import ClientSession
+from mcup.client.websocket import websocket_client
+from mcup.server import Server
+from mcup.server.websocket import websocket_server
+from mcup.shared.exceptions import McpError
+from mcup.types import (
     EmptyResult,
     ErrorData,
     InitializeResult,

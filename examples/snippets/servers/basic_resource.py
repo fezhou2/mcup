@@ -1,4 +1,4 @@
-from mcp.server.fastmcp import FastMCP
+from mcup.server.fastmcp import FastMCP
 
 mcp = FastMCP(name="Resource Example")
 

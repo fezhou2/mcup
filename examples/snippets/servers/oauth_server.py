@@ -5,9 +5,9 @@ Run from the repository root:
 
 from pydantic import AnyHttpUrl
 
-from mcp.server.auth.provider import AccessToken, TokenVerifier
-from mcp.server.auth.settings import AuthSettings
-from mcp.server.fastmcp import FastMCP
+from mcup.server.auth.provider import AccessToken, TokenVerifier
+from mcup.server.auth.settings import AuthSettings
+from mcup.server.fastmcp import FastMCP
 
 
 class SimpleTokenVerifier(TokenVerifier):
