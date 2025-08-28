@@ -3,6 +3,7 @@ from typing import Any, Optional, Set
 from aioconsole import ainput  # For async CLI input
 
 from .session import ClientSession, ProgressFnT
+from mcup import types
 from mcup.types import CallToolResult
 
 logger = logging.getLogger("client")

@@ -1,24 +1,21 @@
 """
 cd to the `examples/snippets/clients` directory and run:
-    uv run client
+    python stdio_client.py
 """
 
 import asyncio
 import os
 from typing import Optional
 
-from pydantic import AnyUrl
-
 from mcup import ClientSession, StdioServerParameters, types
 from mcup.client.stdio import stdio_client
-# MCUPSession used via session_class when approval_mode="cli"
 from mcup.client.mcup_session import MCUPSession
 from mcup.shared.context import RequestContext
 
 # Create server parameters for stdio connection
 server_params = StdioServerParameters(
-    command="uv",
-    args=["run", "server", "fastmcp_quickstart", "stdio"],
+    command="python3",
+    args=["-m", "examples.servers.simple-tool.mcp_simple_tool", "--transport", "stdio"],
     env={"UV_INDEX": os.environ.get("UV_INDEX", "")},
 )
 
@@ -38,51 +35,49 @@ async def handle_sampling_message(
     )
 
 async def run(approval_mode: Optional[str] = None):
-    async with stdio_client(server_params, approval_mode=approval_mode) as session:
-        # Initialize the connection
-        await session.initialize()
+    try:
+        async with stdio_client(server_params, approval_mode=approval_mode) as session:
+            # Initialize the connection
+            try:
+                await session.initialize()
+                print("Session initialized successfully")
+            except Exception as e:
+                print(f"Error initializing session: {e}")
+                return
 
-        # List available prompts
-        prompts = await session.list_prompts()
-        print(f"Available prompts: {[p.name for p in prompts.prompts]}")
+            # List available tools
+            try:
+                tools = await session.list_tools()
+                print(f"Available tools: {[t.name for t in tools.tools]}")
+            except Exception as e:
+                print(f"Error listing tools: {e}")
 
-        # Get a prompt (greet_user prompt from fastmcp_quickstart)
-        if prompts.prompts:
-            prompt = await session.get_prompt("greet_user", arguments={"name": "Alice", "style": "friendly"})
-            print(f"Prompt result: {prompt.messages[0].content}")
+            # Call the fetch tool (non-mutating)
+            try:
+                result = await session.call_tool("fetch", arguments={"url": "https://example.com"})
+                result_unstructured = result.content[0]
+                if isinstance(result_unstructured, types.TextContent):
+                    print(f"Tool result (fetch): {result_unstructured.text[:100]}...")  # Truncate for brevity
+                result_structured = result.structuredContent
+                print(f"Structured tool result (fetch): {result_structured}")
+            except Exception as e:
+                print(f"Error calling fetch: {e}")
 
-        # List available resources
-        resources = await session.list_resources()
-        print(f"Available resources: {[r.uri for r in resources.resources]}")
-
-        # List available tools
-        tools = await session.list_tools()
-        print(f"Available tools: {[t.name for t in tools.tools]}")
-
-        # Read a resource (greeting resource from fastmcp_quickstart)
-        resource_content = await session.read_resource(AnyUrl("greeting://World"))
-        content_block = resource_content.contents[0]
-        if isinstance(content_block, types.TextContent):
-            print(f"Resource content: {content_block.text}")
-
-        # Call a non-mutating tool (add tool from fastmcp_quickstart)
-        result = await session.call_tool("add", arguments={"a": 5, "b": 3})
-        result_unstructured = result.content[0]
-        if isinstance(result_unstructured, types.TextContent):
-            print(f"Tool result (add): {result_unstructured.text}")
-        result_structured = result.structuredContent
-        print(f"Structured tool result (add): {result_structured}")
-
-        # Call a mutating tool (example, adjust based on server tools)
-        try:
-            result = await session.call_tool("write_data", arguments={"data": "example"})
-            result_unstructured = result.content[0]
-            if isinstance(result_unstructured, types.TextContent):
-                print(f"Tool result (write_data): {result_unstructured.text}")
-            result_structured = result.structuredContent
-            print(f"Structured tool result (write_data): {result_structured}")
-        except Exception as e:
-            print(f"Error calling write_data: {e}")
+            # Call the write_data tool (mutating)
+            try:
+                result = await session.call_tool("write_data", arguments={"data": "example"})
+                result_unstructured = result.content[0]
+                if isinstance(result_unstructured, types.TextContent):
+                    print(f"Tool result (write_data): {result_unstructured.text}")
+                result_structured = result.structuredContent
+                print(f"Structured tool result (write_data): {result_structured}")
+            except Exception as e:
+                print(f"Error calling write_data: {e}")
+    except Exception as e:
+        print(f"Stdio client error: {e}")
+        import traceback
+        traceback.print_exc()
+        raise
 
 def main():
     """Entry point for the client script."""
